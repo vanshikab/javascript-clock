@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+
+		<p id="demo"></p>
+
+		<script language="javascript">
+			var side1 = 3; 
+			var side2 = 4; 
+			var answer= (side1 * side2) / 2
+
+			document.write("<b>" + answer + "</b>");
+			alert(answer);
+
+			var d = new Date();
+			var h = d.getHours();
+			var m = d.getMinutes();
+
+			var day;
+
+			// Today is : Monday. Current time is : 12:32 PM
+
+			document.getElementById("demo").innerHTML = `Hours: ${d.getHours()}`;
+
+
+			if (d.getDay() == 0) {
+
+				day = "Sunday";
+
+				document.write("Sunday");
+
+			} else if (d.getDay() == 1) {
+				show("Monday");
+
+			} else if (d.getDay() == 2) {
+				show("Tuesday");
+
+			} else if (d.getDay() == 3) {
+				show("Wednesday");
+
+			} else if (d.getDay() == 4) {
+				show("Thursday");
+
+			} else if (d.getDay() == 5) {
+				show("Friday");
+				
+			} else if (d.getDay() == 6) {
+				show("Saturday");
+
+			}
+
+			function show(day) {
+				document.getElementById("demo").innerHTML = `Today is: ${day}, Current Time : ${d.getHours()}:${d.getMinutes()}`;
+			}
+
+
+
+		</script>
+
